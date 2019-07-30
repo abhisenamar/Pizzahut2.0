@@ -1,0 +1,23 @@
+	PRINTED RECEIPT
+
+	EZAFA PIZZA
+	0761,Jalan Payung Tembus,
+	Skudai,81310
+	Johor Bharu
+
+	www.ezafapizzaawesome.com
+
+CUSTOMER INFORMATION : 
+Name : 
+
+========================================
+||             Your Order            ||
+========================================
+
+Being a member, enjoy a 15% discount on the total price!
+
+Total = RM 0.00
+
+
+Thanks for purchasing our product!
+You are welcome to come again!

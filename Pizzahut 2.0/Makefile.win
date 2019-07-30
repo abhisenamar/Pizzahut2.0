@@ -1,0 +1,49 @@
+# Project: PT2 Project 2
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = FINALmain.o LocationGps.o Promocode.o Food.o Pizza.o Drink.o Pasta.o Sidedish.o
+LINKOBJ  = FINALmain.o LocationGps.o Promocode.o Food.o Pizza.o Drink.o Pasta.o Sidedish.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "PT2 Project 2.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+FINALmain.o: FINALmain.cpp
+	$(CPP) -c FINALmain.cpp -o FINALmain.o $(CXXFLAGS)
+
+LocationGps.o: LocationGps.cpp
+	$(CPP) -c LocationGps.cpp -o LocationGps.o $(CXXFLAGS)
+
+Promocode.o: Promocode.cpp
+	$(CPP) -c Promocode.cpp -o Promocode.o $(CXXFLAGS)
+
+Food.o: Food.cpp
+	$(CPP) -c Food.cpp -o Food.o $(CXXFLAGS)
+
+Pizza.o: Pizza.cpp
+	$(CPP) -c Pizza.cpp -o Pizza.o $(CXXFLAGS)
+
+Drink.o: Drink.cpp
+	$(CPP) -c Drink.cpp -o Drink.o $(CXXFLAGS)
+
+Pasta.o: Pasta.cpp
+	$(CPP) -c Pasta.cpp -o Pasta.o $(CXXFLAGS)
+
+Sidedish.o: Sidedish.cpp
+	$(CPP) -c Sidedish.cpp -o Sidedish.o $(CXXFLAGS)
